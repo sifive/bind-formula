@@ -86,7 +86,7 @@ match-clients {
 };
 {%- endfor %}
 
-// logging {
+//logging {
 //  channel "querylog" {
 //    file "{{ map.log_dir }}/query.log";
 //    print-time yes;
