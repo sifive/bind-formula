@@ -86,13 +86,13 @@ match-clients {
 };
 {%- endfor %}
 
-logging {
-  channel "querylog" {
-    file "{{ map.log_dir }}/query.log";
-    print-time yes;
-  };
-  category queries { querylog; };
-};
+// logging {
+//  channel "querylog" {
+//    file "{{ map.log_dir }}/query.log";
+//    print-time yes;
+//  };
+//  category queries { querylog; };
+//};
 
 {%- for name, data in salt['pillar.get']('bind:configured_acls', {}).items() %}
 acl {{ name }} {
